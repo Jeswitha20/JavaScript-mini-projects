@@ -1,0 +1,5 @@
+This is a simple project example that demonstrates browser + Node.js working together (like a frontend page sending data to a Node backend)
+ Goal:
+We’ll create a small system where:
+Frontend (Browser JavaScript) → sends data (your name).
+Backend (Node.js JavaScript) → receives and responds with a message.
