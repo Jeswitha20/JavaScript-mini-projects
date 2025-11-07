@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser to Node.js Example</title>
+</head>
+<body> 
+    <h2> Enter your name: </h2>
+    <input type="text" id="nameInput" placeholder="Your name"> 
+    <button id="sendBtn"> Send to Server</button>
+    <p id="response"></p>
+
+    <script>
+        document.getElementById("sendBtn").addEventListener("click",async () => {
+            const name = document.getElementById("nameInput").value;
+
+            //sending name to Node.js Server
+            const res = await fetch("/greet?name=" + name);
+            const data = await res.text();
+
+            document.getElementById("response").textContent = data; 
+        });
+    </script>
+</body>
+</html>
